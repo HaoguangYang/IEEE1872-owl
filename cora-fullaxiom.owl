@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/ieee1872-owl/cora-fullaxiom#"
-     xml:base="http://purl.org/ieee1872-owl/cora-fullaxiom"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora-fullaxiom.owl#"
+     xml:base="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora-fullaxiom.owl"
      xmlns:annotation="http://purl.org/ieee1872-owl/annotation#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -8,8 +8,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://purl.org/ieee1872-owl/cora-fullaxiom">
-        <owl:imports rdf:resource="http://purl.org/ieee1872-owl/cora"/>
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora-fullaxiom.owl">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora.owl"/>
         <owl:imports rdf:resource="http://purl.org/ieee1872-owl/pos"/>
         <rdfs:comment xml:lang="en">This is the fully axiomatized OWL implementation of the ontologies IEEE 1872-2015. It only includes all concepts and properties defined in the standard, as well as all axioms that we were capable of translating to OWL. 
 
@@ -228,23 +228,23 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#Design -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#Design">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/corax#about"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/corax#about"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>6.1.12</annotation:ieee18722015AxiomNumber>
@@ -252,31 +252,31 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#DesignObject -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject">
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/corax#about"/>
+                        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/corax#about"/>
+                        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>6.1.11</annotation:ieee18722015AxiomNumber>

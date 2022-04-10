@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/ieee1872-owl/corax#"
-     xml:base="http://purl.org/ieee1872-owl/corax"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#"
+     xml:base="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,7 +8,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:annotation="http://purl.org/ieee1872-owl/annotation#">
-    <owl:Ontology rdf:about="http://purl.org/ieee1872-owl/corax">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl">
         <owl:imports rdf:resource="http://purl.org/ieee1872-owl/annotation"/>
         <owl:imports rdf:resource="http://purl.org/ieee1872-owl/sumo-cora"/>
         <dc:contributor xml:lang="en">Sandro Rama Fiorini</dc:contributor>
@@ -37,21 +37,21 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#about -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#about">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Proposition"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#about"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Proposition"/>
         <annotation:ieee18722015AxiomNumber>6.1.9</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#about"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
         <annotation:ieee18722015AxiomNumber>6.1.10</annotation:ieee18722015AxiomNumber>
@@ -59,20 +59,20 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#dependsOn -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#dependsOn -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#dependsOn">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#dependsOn">
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#dependsOn"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#dependsOn"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
         <annotation:ieee18722015AxiomNumber>6.2.3</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#dependsOn"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#dependsOn"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
         <annotation:ieee18722015AxiomNumber>6.2.4</annotation:ieee18722015AxiomNumber>
@@ -80,29 +80,29 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#designAttribute -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designAttribute -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#designAttribute">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/corax#property"/>
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designAttribute">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#property"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#property"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#designAttribute"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designAttribute"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/corax#property"/>
+        <owl:annotatedTarget rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#property"/>
         <annotation:ieee18722015AxiomNumber>6.1.13</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#designAttribute"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designAttribute"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <owl:annotatedTarget rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
         <annotation:ieee18722015AxiomNumber>6.1.16</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#designAttribute"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designAttribute"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
         <annotation:ieee18722015AxiomNumber>6.1.17</annotation:ieee18722015AxiomNumber>
@@ -110,21 +110,21 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#designMeasure -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designMeasure -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#designMeasure">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designMeasure">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#PhysicalQuantity"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#designMeasure"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designMeasure"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <owl:annotatedTarget rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
         <annotation:ieee18722015AxiomNumber>6.1.20</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#designMeasure"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#designMeasure"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#PhysicalQuantity"/>
         <annotation:ieee18722015AxiomNumber>6.1.21</annotation:ieee18722015AxiomNumber>
@@ -132,21 +132,21 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#idealizes -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#idealizes -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#idealizes">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#idealizes">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#idealizes"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#idealizes"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+        <owl:annotatedTarget rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design"/>
         <annotation:ieee18722015AxiomNumber>6.1.4</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#idealizes"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#idealizes"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
         <annotation:ieee18722015AxiomNumber>6.1.4</annotation:ieee18722015AxiomNumber>
@@ -154,21 +154,21 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#interactsWith -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#interactsWith -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#interactsWith">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#interactsWith">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#interactsWith"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#interactsWith"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
         <annotation:ieee18722015AxiomNumber>6.3.6</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#interactsWith"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#interactsWith"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
         <annotation:ieee18722015AxiomNumber>6.3.7</annotation:ieee18722015AxiomNumber>
@@ -176,9 +176,9 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#property -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#property -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/ieee1872-owl/corax#property">
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#property">
         <owl:equivalentProperty rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#property"/>
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Entity"/>
         <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
@@ -205,13 +205,13 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#ArtificialSystem -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ArtificialSystem -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#ArtificialSystem">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ArtificialSystem">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#ArtificialSystem"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ArtificialSystem"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
         <annotation:ieee18722015AxiomNumber>6.4.1</annotation:ieee18722015AxiomNumber>
@@ -219,13 +219,13 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#Design -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#Design">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Proposition"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#Design"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Design"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Proposition"/>
         <annotation:ieee18722015AxiomNumber>6.1.1</annotation:ieee18722015AxiomNumber>
@@ -233,13 +233,13 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#DesignObject -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#DesignObject">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#DesignObject"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#DesignObject"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
         <annotation:ieee18722015AxiomNumber>6.1.6</annotation:ieee18722015AxiomNumber>
@@ -247,14 +247,14 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#HumanRobotCommunication -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#HumanRobotCommunication -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#HumanRobotCommunication">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#HumanRobotCommunication">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
         <rdfs:comment>In IEEE 1872-2015, this class is subclass of ContentBearingProcess, which is not present in SUMO 1.52. That is probably a mistake in IEEE 1872-2015.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#HumanRobotCommunication"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#HumanRobotCommunication"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
         <annotation:ieee18722015AxiomNumber>6.7.1</annotation:ieee18722015AxiomNumber>
@@ -262,13 +262,13 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#Interaction -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Interaction -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#Interaction">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Interaction">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#Interaction"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#Interaction"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
         <annotation:ieee18722015AxiomNumber>6.3.1</annotation:ieee18722015AxiomNumber>
@@ -276,13 +276,13 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#PhysicalEnvironment -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#PhysicalEnvironment -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#PhysicalEnvironment">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#PhysicalEnvironment">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#PhysicalEnvironment"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#PhysicalEnvironment"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
         <annotation:ieee18722015AxiomNumber>6.2.1</annotation:ieee18722015AxiomNumber>
@@ -290,27 +290,36 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#ProcessingDevice -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ProcessingDevice -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#ProcessingDevice">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ProcessingDevice">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#ProcessingDevice"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ProcessingDevice"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
         <annotation:ieee18722015AxiomNumber>6.5.1</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#MeasuringDevice -->
 
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#MeasuringDevice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#MeasuringDevice"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
+    </owl:Axiom>
 
-    <!-- http://purl.org/ieee1872-owl/corax#RobotMotion -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotMotion -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#RobotMotion">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotMotion">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Motion"/>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#RobotMotion"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotMotion"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Motion"/>
         <annotation:ieee18722015AxiomNumber>6.6.1</annotation:ieee18722015AxiomNumber>
@@ -318,14 +327,14 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/corax#RobotRobotCommunication -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotRobotCommunication -->
 
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/corax#RobotRobotCommunication">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotRobotCommunication">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
         <rdfs:comment>In IEEE 1872-2015, this class is subclass of ContentBearingProcess, which is not present in SUMO 1.52. That is probably a mistake in IEEE 1872-2015.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/corax#RobotRobotCommunication"/>
+        <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotRobotCommunication"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
         <annotation:ieee18722015AxiomNumber>6.8.1</annotation:ieee18722015AxiomNumber>
