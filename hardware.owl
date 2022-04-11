@@ -17,11 +17,146 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#charges -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#charges">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#powers"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#dependsOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PhysicalInterface"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PhysicalInterface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#powers -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#powers">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#dependsOn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#powers"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#MeasuringDevice -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#MeasuringDevice">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#measure"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#TimeSeries"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#member"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#AbstractInterface"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#AbstractInterface -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#AbstractInterface">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
     
 
 
@@ -49,10 +184,36 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ammeter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ammeter">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ResourceSensor"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BallJoint -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BallJoint">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#3DoFJoint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BaseStation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BaseStation">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#member"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -65,10 +226,30 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BatterySoCSensor -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BatterySoCSensor">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ResourceSensor"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Bluetooth -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Bluetooth">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Bluetooth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -92,7 +273,19 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CANbus -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CANbus">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CANbus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -116,15 +309,67 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Cellular -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Cellular">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CellularBaseStation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CellularBaseStation -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CellularBaseStation">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PhysicalInterface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+        </owl:disjointUnionOf>
     </owl:Class>
     
 
@@ -149,6 +394,30 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Database">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#StorageDevice"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#member"/>
+                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BaseStation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#AbstractInterface"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#EthernetAccessPoint"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFi"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFiAccessPoint"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -188,7 +457,34 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#EthernetAccessPoint"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#EthernetAccessPoint -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#EthernetAccessPoint">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
     </owl:Class>
     
 
@@ -317,6 +613,22 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Infrastructure -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Infrastructure">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#PhysicalEnvironment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#MeasuringDevice"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Joint -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Joint">
@@ -330,6 +642,22 @@
             <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#4DoFJoint"/>
             <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#5DoFJoint"/>
         </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Joystick -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Joystick">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Keyboard -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Keyboard">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice"/>
     </owl:Class>
     
 
@@ -387,6 +715,29 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#NAS">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#StorageDevice"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#member"/>
+                        <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BaseStation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#EthernetAccessPoint"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFi"/>
+                                    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFiAccessPoint"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -411,6 +762,14 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PermanentMagnetMotor">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#RotationalMotor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PhysicalInterface -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PhysicalInterface">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
     </owl:Class>
     
 
@@ -456,6 +815,15 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PoE -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PoE">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PointRangeSensor -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PointRangeSensor">
@@ -467,7 +835,13 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#powers"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ElectricDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -536,6 +910,26 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SerialPort -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SerialPort">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SerialPort"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ServoMotor -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ServoMotor">
@@ -586,10 +980,67 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#TimeSeries -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#TimeSeries">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#PhysicalQuantity"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Transmission -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Transmission">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#connectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Bluetooth"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CANbus"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Ethernet"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SerialPort"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFi"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFiAccessPoint"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ZigBee"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB2 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB2">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB3 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB3">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
     </owl:Class>
     
 
@@ -611,6 +1062,32 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VoltageAdapter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VoltageAdapter">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#powers"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Voltmeter -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Voltmeter">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ResourceSensor"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VolumetricScannar -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VolumetricScannar">
@@ -622,6 +1099,7 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WallPowerOutlet -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WallPowerOutlet">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Infrastructure"/>
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
     </owl:Class>
     
@@ -638,7 +1116,52 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFi -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFi">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFiAccessPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFiAccessPoint -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiFiAccessPoint">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCharger -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCharger">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Infrastructure"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#charges"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Battery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WiredCommunication">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
     </owl:Class>
     
 
@@ -647,6 +1170,41 @@
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessChargerReceiver">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PowerSupply"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#charges"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Battery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessChargingDock -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessChargingDock">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInfrastructure"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -654,7 +1212,26 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ZigBee -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ZigBee">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsDevice"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessCommunication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#convertibleTo"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SerialPort"/>
+                            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#USB"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#wirelesslyConnectsTo"/>
+                <owl:allValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ZigBee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
