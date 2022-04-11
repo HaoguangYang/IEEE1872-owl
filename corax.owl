@@ -245,18 +245,24 @@ Concept definitions in natural language and othe clarifications can be found in 
         <annotation:ieee18722015AxiomNumber>6.1.6</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     
+    
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#ContentBearingProcess -->
 
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#ContentBearingProcess">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+    </owl:Class>
+    
 
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#HumanRobotCommunication -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#HumanRobotCommunication">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ContentBearingProcess"/>
         <rdfs:comment>In IEEE 1872-2015, this class is subclass of ContentBearingProcess, which is not present in SUMO 1.52. That is probably a mistake in IEEE 1872-2015.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#HumanRobotCommunication"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ContentBearingProcess"/>
         <annotation:ieee18722015AxiomNumber>6.7.1</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     
@@ -330,13 +336,13 @@ Concept definitions in natural language and othe clarifications can be found in 
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotRobotCommunication -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotRobotCommunication">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ContentBearingProcess"/>
         <rdfs:comment>In IEEE 1872-2015, this class is subclass of ContentBearingProcess, which is not present in SUMO 1.52. That is probably a mistake in IEEE 1872-2015.</rdfs:comment>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#RobotRobotCommunication"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
+        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#ContentBearingProcess"/>
         <annotation:ieee18722015AxiomNumber>6.8.1</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
 </rdf:RDF>

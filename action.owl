@@ -77,15 +77,15 @@
     
 
 
-    <!-- ttps://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Action -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Action -->
 
-    <owl:Class rdf:about="ttps://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Action"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Action"/>
     
 
 
-    <!-- ttps://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ActionType -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ActionType -->
 
-    <owl:Class rdf:about="ttps://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ActionType"/>
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ActionType"/>
     
 
 
