@@ -145,6 +145,28 @@
     
 
 
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Concept -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Property -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Property">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#Tool -->
+
+    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Tool"/>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Action -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Action">
@@ -177,6 +199,92 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Dependency -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Dependency">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FuncationalPerformance -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FuncationalPerformance">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalAttribute"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalAttribute -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalAttribute">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalCapability -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalCapability">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Capability"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalDependency -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalDependency">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Dependency"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#FunctionalAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Performance -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Performance">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceAttribute -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceAttribute">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Attribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceCapacity -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceCapacity">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Capability"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceDependency -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceDependency">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Dependency"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceAttribute"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceUtilization -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceUtilization">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Performance"/>
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceAttribute"/>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Situation -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Situation">
@@ -190,25 +298,9 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#SituationType">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Concept"/>
     </owl:Class>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/sumo-cora#Concept -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Concept">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/sumo-cora#Property -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Property">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
-    </rdf:Description>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
- 
+
