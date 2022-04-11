@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/yang/ontologies/2022/3/untitled-ontology-28#"
-     xml:base="http://www.semanticweb.org/yang/ontologies/2022/3/untitled-ontology-28"
+<rdf:RDF xmlns="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#"
+     xml:base="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:annotation="http://purl.org/ieee1872-owl/annotation#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl">
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl"/>
     </owl:Ontology>
     
 
@@ -128,7 +128,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#measure"/>
-                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#TimeSeries"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#PhysicalQuantity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -976,14 +976,6 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#StructuredLightCamera">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Camera"/>
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VolumetricScannar"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#TimeSeries -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#TimeSeries">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#PhysicalQuantity"/>
     </owl:Class>
     
 
