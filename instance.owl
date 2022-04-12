@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#"
+     xml:base="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cap="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:task="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/task.owl#"
+     xmlns:action="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#"
+     xmlns:rparts="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#"
+     xmlns:hardware="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#"
+     xmlns:cora-bare="http://purl.org/ieee1872-owl/cora-bare#"
+     xmlns:sumo-cora="http://purl.org/ieee1872-owl/sumo-cora#"
+     xmlns:annotation="http://purl.org/ieee1872-owl/annotation#"
+     xmlns:cora-fullaxion="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora-fullaxiom.owl">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#">
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora-fullaxiom.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/task.owl#"/>
+        <dc:contributor>Elisa Tosello</dc:contributor>
+        <dc:creator>Elisa Tosello</dc:creator>
+        <dc:rights xml:lang="en">IEEE 1872-2015 copyright is property of IEEE Standards Association.
+
+The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licenses/by/4.0/)</dc:rights>
+        <rdfs:comment xml:lang="en">This is the OWL version of the RTASK ontology. It extends the fully axiomatized OWL implementation of the ontologies IEEE 1872-2015 to include all concepts and properties defined in the standard, concepts and properties useful to define a robotic action, capability, and task, as well as all axioms capable of translating to OWL.</rdfs:comment>
+        <rdfs:seeAlso>https://github.com/CloudRobotics-TAMP/IEEE1872-owl.git</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Arduino -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Arduino">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#MCU"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Button -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Button">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Arduino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#HokuyoUST20LX -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#HokuyoUST20LX">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PlanarLiDAR"/>
+        <rparts:robotSensingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+        <getsPowerFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36Vto12VConverter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#IntelCorei73700T -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#IntelCorei73700T">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CPU"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#IntelRealSenseD435i -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#IntelRealSenseD435i">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#IMU"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#StructuredLightCamera"/>
+        <rparts:robotSensingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#IntelRealSenseT265 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#IntelRealSenseT265">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#IMU"/>
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VisualOdometer"/>
+        <rparts:robotSensingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#LogitechExtreme3DPro -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#LogitechExtreme3DPro">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Joystick"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#yang-ThinkPad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor">
+        <rdf:type rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyorInterface -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyorInterface">
+        <rdf:type rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotInterface"/>
+        <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Computer"/>
+        <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Samsung1TB -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#Samsung1TB">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SSD"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#WirelessCharger36V50A -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#WirelessCharger36V50A">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#WirelessChargerReceiver"/>
+        <sumo-cora:part rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+        <hardware:charges rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36V832WhLiIonBattery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#genericKeyboard -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#genericKeyboard">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Keyboard"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#yang-ThinkPad -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#yang-ThinkPad">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BaseStation"/>
+        <isConnectedFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36V832WhLiIonBattery -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36V832WhLiIonBattery">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Battery"/>
+        <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+        <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OmniVeyor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36Vto12VConverter -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36Vto12VConverter">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VoltageAdapter"/>
+        <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+        <getsPowerFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#36V832WhLiIonBattery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#8GBDDR3 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#8GBDDR3">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#RAM"/>
+        <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rtask.owl#OnboardComputer"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
