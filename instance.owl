@@ -87,6 +87,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Arduino">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#MCU"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
     
@@ -96,6 +97,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Button">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice"/>
+        <hardware:connectsTo rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Arduino"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Arduino"/>
     </owl:NamedIndividual>
     
@@ -105,6 +107,8 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#HokuyoUST20LX">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#PlanarLiDAR"/>
+        <hardware:connectsTo rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
+        <hardware:getsPowerFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36Vto12VConverter"/>
         <rparts:robotSensingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
         <getsPowerFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36Vto12VConverter"/>
     </owl:NamedIndividual>
@@ -115,6 +119,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#IntelCorei73700T">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CPU"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
     
@@ -125,6 +130,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#IntelRealSenseD435i">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#IMU"/>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#StructuredLightCamera"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <rparts:robotSensingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
@@ -136,6 +142,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#IntelRealSenseT265">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#IMU"/>
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VisualOdometer"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <rparts:robotSensingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
@@ -146,6 +153,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#LogitechExtreme3DPro">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Joystick"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#yang-ThinkPad"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#yang-ThinkPad"/>
     </owl:NamedIndividual>
     
@@ -168,11 +176,20 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyorPCVx4 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyorPCVx4">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Motor"/>
+        <rparts:robotActuatingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Computer"/>
-        <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
+        <rparts:robotProcessingPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
     </owl:NamedIndividual>
     
 
@@ -181,6 +198,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Samsung1TB">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#SSD"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
     
@@ -200,6 +218,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#genericKeyboard">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Keyboard"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
     
@@ -209,6 +228,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#yang-ThinkPad">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#BaseStation"/>
+        <hardware:isConnectedFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
         <isConnectedFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
     </owl:NamedIndividual>
     
@@ -219,7 +239,8 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36V832WhLiIonBattery">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Battery"/>
         <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
-        <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
+        <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyorPCVx4"/>
+        <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36Vto12VConverter"/>
     </owl:NamedIndividual>
     
 
@@ -228,6 +249,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36Vto12VConverter">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#VoltageAdapter"/>
+        <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
         <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <getsPowerFrom rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36V832WhLiIonBattery"/>
     </owl:NamedIndividual>
@@ -238,6 +260,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#8GBDDR3">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#RAM"/>
+        <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
     <rdf:Description>

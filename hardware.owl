@@ -246,13 +246,17 @@
 
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#robotActuatingPart -->
 
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#robotActuatingPart"/>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#robotActuatingPart">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Actuator"/>
+    </rdf:Description>
     
 
 
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#robotCommunicatingPart -->
 
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#robotCommunicatingPart"/>
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#robotCommunicatingPart">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CommunicationsInterface"/>
+    </rdf:Description>
     
 
 
@@ -353,6 +357,7 @@
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Actuator -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Actuator">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#ActiveMechanism"/>
     </owl:Class>
     
