@@ -11,7 +11,7 @@
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/task.owl#">
         <owl:imports rdf:resource="http://purl.org/ieee1872-owl/annotation"/>
         <owl:imports rdf:resource="http://purl.org/ieee1872-owl/sumo-cora"/>
-        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl"/>
         <dc:contributor>Elisa Tosello</dc:contributor>
         <dc:creator>Elisa Tosello</dc:creator>
         <rdfs:comment>This is the OWL version of the TASK ontology</rdfs:comment>
