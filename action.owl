@@ -250,9 +250,9 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#Gripper -->
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Gripper -->
 
-    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#Gripper">
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Gripper">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Tool"/>
     </owl:Class>
 </rdf:RDF>
