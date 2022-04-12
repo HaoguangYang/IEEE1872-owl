@@ -53,15 +53,6 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#activates -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#activates">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#SituationType"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Behavior"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#allowsPerforming -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#allowsPerforming">
@@ -80,29 +71,11 @@
     
 
 
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#situationClassifiedBy -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#situationClassifiedBy">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Situation"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#SituationType"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#toolCapability -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#toolCapability">
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Tool"/>
         <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Capability"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#triggers -->
-
-    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#triggers">
-        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Behavior"/>
-        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#ActionType"/>
     </owl:ObjectProperty>
     
 
@@ -167,14 +140,6 @@
 
     <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Tool">
         <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Artifact"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Behavior -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Behavior">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Property"/>
     </owl:Class>
     
 
@@ -277,22 +242,6 @@
     <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceUtilization">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Performance"/>
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceAttribute"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Situation -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#Situation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
-    </owl:Class>
-    
-
-
-    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#SituationType -->
-
-    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#SituationType">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Concept"/>
     </owl:Class>
 </rdf:RDF>
 

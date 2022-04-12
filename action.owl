@@ -56,6 +56,33 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#activates -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#activates">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#SituationType"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Behavior"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#situationClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#situationClassifiedBy">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Situation"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#SituationType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#triggers -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#triggers">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Behavior"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#ActionType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#composes -->
 
     <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#composes">
@@ -74,6 +101,14 @@
      -->
 
     
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Behavior -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Behavior">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Property"/>
+    </owl:Class>
+
 
 
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Action -->
@@ -100,18 +135,6 @@
     
 
 
-    <!-- http://purl.org/ieee1872-owl/pos#PoseMeasure -->
-
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/pos#PoseMeasure"/>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/sumo-cora#Object -->
-
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Object"/>
-    
-
-
     <!-- http://purl.org/ieee1872-owl/sumo-cora#Plan -->
 
     <owl:Class rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Plan">
@@ -124,6 +147,22 @@
         </rdfs:subClassOf>
     </owl:Class>
     
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Situation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#Situation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Abstract"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#SituationType -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#SituationType">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Concept"/>
+    </owl:Class>
+
 
 
     <!-- http://purl.org/ieee1872-owl/sumo-cora#TimeMeasure -->
