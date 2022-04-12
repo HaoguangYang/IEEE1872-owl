@@ -9,8 +9,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora.owl">
-        <owl:imports rdf:resource="http://purl.org/ieee1872-owl/cora-bare"/>
-        <owl:imports rdf:resource="http://purl.org/ieee1872-owl/sumo-cora"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl"/>
         <rdfs:seeAlso>https://github.com/srfiorini/IEEE1872-owl</rdfs:seeAlso>
@@ -92,144 +90,8 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
         <annotation:ieee18722015AxiomNumber>7.6.3</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem">
-        <owl:disjointWith rdf:resource="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#disjointWith"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
-        <annotation:ieee18722015AxiomNumber>7.8.3</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#Robot -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#Robot">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Agent"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Agent"/>
-        <annotation:ieee18722015AxiomNumber>7.1.2</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
-        <annotation:ieee18722015AxiomNumber>7.1.1</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RobotGroup -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RobotGroup">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Group"/>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotGroup"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Group"/>
-        <annotation:ieee18722015AxiomNumber>7.5.1</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RobotInterface -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RobotInterface">
-        <rdfs:subClassOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotInterface"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
-        <annotation:ieee18722015AxiomNumber>7.3.1</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment -->
-
-    <owl:Class rdf:about="http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment">
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#PhysicalEnvironment"/>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#PhysicalEnvironment"/>
-        <annotation:ieee18722015AxiomNumber>7.7.1</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RoboticSystem -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem"/>
-                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ArtificialSystem"/>
-    </rdf:Description>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
-        <owl:annotatedTarget>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem"/>
-                    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:annotatedTarget>
-        <annotation:ieee18722015AxiomNumber>7.8.3</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#ArtificialSystem"/>
-        <annotation:ieee18722015AxiomNumber>7.6.1</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#disjointWith"/>
-        <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
-        <annotation:ieee18722015AxiomNumber>7.8.3</annotation:ieee18722015AxiomNumber>
-    </owl:Axiom>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-

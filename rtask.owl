@@ -60,18 +60,6 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
      -->
 
     
-
-
-    <!-- http://purl.org/ieee1872-owl/sumo-cora#Plan -->
-
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#Plan">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/corax.owl#about"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </rdf:Description>
     <rdf:Description>
         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
