@@ -87,9 +87,9 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#CollectiveRoboticSystem -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#CollectiveRoboticSystem">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -98,12 +98,12 @@ Concept definitions in natural language and othe clarifications can be found in 
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:onClass rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#CollectiveRoboticSystem"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#CollectiveRoboticSystem"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
@@ -113,7 +113,7 @@ Concept definitions in natural language and othe clarifications can be found in 
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:onClass rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>7.8.5</annotation:ieee18722015AxiomNumber>
@@ -121,33 +121,33 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#Robot -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#Robot">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/cora-bare#robotPart"/>
+                        <owl:inverseOf rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotInterface"/>
+                <owl:onClass rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RobotInterface"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/cora-bare#robotPart"/>
+                        <owl:inverseOf rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotInterface"/>
+                <owl:onClass rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RobotInterface"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>7.3.2</annotation:ieee18722015AxiomNumber>
@@ -156,9 +156,9 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RobotGroup -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RobotGroup -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RobotGroup">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RobotGroup">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -166,12 +166,12 @@ Concept definitions in natural language and othe clarifications can be found in 
                         <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#member"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotGroup"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RobotGroup"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
@@ -180,7 +180,7 @@ Concept definitions in natural language and othe clarifications can be found in 
                         <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#member"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:allValuesFrom rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:allValuesFrom rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>7.5.2</annotation:ieee18722015AxiomNumber>
@@ -188,23 +188,23 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticEnvironment -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticEnvironment">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/cora-bare#equippedWith"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem"/>
+                <owl:onProperty rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#equippedWith"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticSystem"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticEnvironment"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticEnvironment"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/ieee1872-owl/cora-bare#equippedWith"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem"/>
+                <owl:onProperty rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#equippedWith"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticSystem"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>7.7.6</annotation:ieee18722015AxiomNumber>
@@ -212,9 +212,9 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#RoboticSystem -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticSystem -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticSystem">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -222,12 +222,12 @@ Concept definitions in natural language and othe clarifications can be found in 
                         <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#part"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RoboticSystem"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RoboticSystem"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
@@ -236,7 +236,7 @@ Concept definitions in natural language and othe clarifications can be found in 
                         <owl:inverseOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#part"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>7.6.5</annotation:ieee18722015AxiomNumber>
@@ -244,9 +244,9 @@ Concept definitions in natural language and othe clarifications can be found in 
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#SingleRoboticSystem -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#SingleRoboticSystem">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -255,12 +255,12 @@ Concept definitions in natural language and othe clarifications can be found in 
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:onClass rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#SingleRoboticSystem"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#SingleRoboticSystem"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
@@ -270,7 +270,7 @@ Concept definitions in natural language and othe clarifications can be found in 
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+                <owl:onClass rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <annotation:ieee18722015AxiomNumber>7.8.4</annotation:ieee18722015AxiomNumber>

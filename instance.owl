@@ -12,7 +12,7 @@
      xmlns:action="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#"
      xmlns:rparts="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#"
      xmlns:hardware="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#"
-     xmlns:cora-bare="http://purl.org/ieee1872-owl/cora-bare#"
+     xmlns:cora-bare="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#"
      xmlns:sumo-cora="http://purl.org/ieee1872-owl/sumo-cora#"
      xmlns:annotation="http://purl.org/ieee1872-owl/annotation#"
      xmlns:cora-fullaxion="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cora-fullaxiom.owl">
@@ -161,7 +161,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor">
-        <rdf:type rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
+        <rdf:type rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#Robot"/>
     </owl:NamedIndividual>
     
 
@@ -169,7 +169,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyorInterface -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyorInterface">
-        <rdf:type rdf:resource="http://purl.org/ieee1872-owl/cora-bare#RobotInterface"/>
+        <rdf:type rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#RobotInterface"/>
         <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
     </owl:NamedIndividual>
     

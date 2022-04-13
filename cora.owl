@@ -37,42 +37,41 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#agentRobot -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#agentRobot -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#agentRobot">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#agentRobot">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#agent"/>
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
-        <rdfs:range rdf:resource="http://purl.org/ieee1872-owl/cora-bare#Robot"/>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#agentRobot"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#agentRobot"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#agent"/>
         <annotation:ieee18722015AxiomNumber>7.4.1</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#agentRobot"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#agentRobot"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Process"/>
         <rdfs:comment>7.4.3</rdfs:comment>
     </owl:Axiom>
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#robotPart -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#robotPart">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#part"/>
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#robotPart"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#part"/>
         <annotation:ieee18722015AxiomNumber>7.2.1</annotation:ieee18722015AxiomNumber>
     </owl:Axiom>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#robotPart"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
         <annotation:ieee18722015AxiomNumber>7.2.2</annotation:ieee18722015AxiomNumber>
@@ -80,13 +79,13 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#support -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#support -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#support">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#support">
         <rdfs:domain rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
     </rdf:Description>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.org/ieee1872-owl/cora-bare#support"/>
+        <owl:annotatedSource rdf:resource="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#support"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
         <owl:annotatedTarget rdf:resource="http://purl.org/ieee1872-owl/sumo-cora#Device"/>
         <annotation:ieee18722015AxiomNumber>7.6.3</annotation:ieee18722015AxiomNumber>

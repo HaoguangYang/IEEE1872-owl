@@ -9,7 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rparts="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/rparts.owl#"
-     xmlns:cora-bare="http://purl.org/ieee1872-owl/cora-bare#"
+     xmlns:cora-bare="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#"
      xmlns:sumo-cora="http://purl.org/ieee1872-owl/sumo-cora#"
      xmlns:annotation="http://purl.org/ieee1872-owl/annotation#">
     <owl:Ontology rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/action.owl#">

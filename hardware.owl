@@ -25,9 +25,9 @@
     
 
 
-    <!-- http://purl.org/ieee1872-owl/cora-bare#robotPart -->
+    <!-- https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart -->
 
-    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/cora-bare#robotPart">
+    <rdf:Description rdf:about="https://github.com/HaoguangYang/IEEE1872-owl/blob/master/cora-bare.owl#robotPart">
         <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#robotHasPart"/>
     </rdf:Description>
     
