@@ -74,6 +74,55 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ieee1872-owl/sumo-cora#part -->
+
+    <rdf:Description rdf:about="http://purl.org/ieee1872-owl/sumo-cora#part">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#deviceCapability -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#deviceCapability">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#hasPart"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#deviceCapability"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#softwareCapability -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#softwareCapability">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#hasPart"/>
+            <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#softwareCapability"/>
+        </owl:propertyChainAxiom>
+    </rdf:Description>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#hasPart -->
+
+    <rdf:Description rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#hasPart">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -92,12 +141,34 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     
 
 
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#BatteryCapacity -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#BatteryCapacity">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceCapacity"/>
+        <cap:capabilityId rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">234</cap:capabilityId>
+        <cap:capabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normalizedBatteryCapacity</cap:capabilityName>
+        <cap:continuousCapabilityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</cap:continuousCapabilityValue>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Button -->
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Button">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#InputDevice"/>
         <hardware:connectsTo rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Arduino"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#Arduino"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#CPUCapacity -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#CPUCapacity">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/cap.owl#ResourceCapacity"/>
+        <cap:capabilityId rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedInt">123</cap:capabilityId>
+        <cap:capabilityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normalizedCapacity</cap:capabilityName>
+        <cap:continuousCapabilityValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</cap:continuousCapabilityValue>
     </owl:NamedIndividual>
     
 
@@ -118,6 +189,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
 
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#IntelCorei73700T">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#CPU"/>
+        <cap:deviceCapability rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#CPUCapacity"/>
         <hardware:computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
         <computerPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OnboardComputer"/>
     </owl:NamedIndividual>
@@ -238,6 +310,7 @@ The ontologies in IEEE1872-owl are CC-BY-4.0 (https://creativecommons.org/licens
     <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36V832WhLiIonBattery">
         <rdf:type rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/hardware.owl#Battery"/>
         <cora-bare:robotPart rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyor"/>
+        <cap:deviceCapability rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#BatteryCapacity"/>
         <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#OmniVeyorPCVx4"/>
         <hardware:powers rdf:resource="https://raw.githubusercontent.com/HaoguangYang/IEEE1872-owl/master/instance.owl#36Vto12VConverter"/>
     </owl:NamedIndividual>
